@@ -324,7 +324,7 @@ const images = [
   { src: "/img/gallery4.webp", caption: "Happy Days" },
   { src: "/img/gallery6.webp", caption: "Magical Moments" },
   { src: "/img/ourstory2.webp", caption: "Our Journey" },
-  { src: "/img/gallery9.webp", caption: "Joyful Times" },
+  { src: "/img/gallery9.webp", caption: "Joyful Time" },
 ];
 
 // Lightbox state
