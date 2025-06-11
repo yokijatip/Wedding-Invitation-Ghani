@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Fonts */
+  --font-cursive: "Tangerine", cursive;
+  --font-sans: "Open Sans", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-montserat: "Montserrat Alternates", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+
+  /* Custom Font Color */
+  --color-primary-white: #d9d9d9;
+
+  /* Custom Shadows for Wedding Elements */
+  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-elegant: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-romantic: 0 20px 25px -5px rgba(190, 24, 93, 0.1),
+    0 10px 10px -5px rgba(190, 24, 93, 0.04);
+
+  /* Custom Font Sizes for Wedding Typography */
+  --font-size-hero: 4rem;
+  --font-size-title: 3rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+
+  /* Custom Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Custom Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+
+  /* Animation Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+
+  /* Gradient Backgrounds */
+  --gradient-romantic: linear-gradient(
+    135deg,
+    var(--color-primary-50) 0%,
+    var(--color-primary-100) 50%,
+    var(--color-primary-200) 100%
+  );
+  --gradient-elegant: linear-gradient(
+    135deg,
+    var(--color-cream-50) 0%,
+    var(--color-champagne-100) 100%
+  );
+  --gradient-sunset: linear-gradient(
+    135deg,
+    var(--color-accent-100) 0%,
+    var(--color-primary-200) 50%,
+    var(--color-secondary-100) 100%
+  );
+}
+
+/* Custom Utility Classes */
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn var(--duration-slow) ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--duration-normal) ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.5rem;
+    --font-size-title: 2rem;
+    --font-size-subtitle: 1.25rem;
+  }
+}
