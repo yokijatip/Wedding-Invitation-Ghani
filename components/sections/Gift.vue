@@ -20,29 +20,6 @@
 
               <!-- Bank Cards -->
               <div class="space-y-3 mt-4">
-                <!-- BNI -->
-                <div
-                  class="flex items-center justify-between bg-white/10 p-3 rounded-lg backdrop-blur-sm"
-                >
-                  <div class="flex items-center gap-3">
-                    <div
-                      class="w-12 h-8 bg-orange-500 rounded flex items-center justify-center"
-                    >
-                      <span class="text-white font-bold text-xs">BNI</span>
-                    </div>
-                    <div>
-                      <p class="text-white font-semibold text-sm">1362218282</p>
-                      <p class="text-gray-300 text-xs">Ghani</p>
-                    </div>
-                  </div>
-                  <button
-                    @click="copyToClipboard('1362218282', 'BNI')"
-                    class="bg-white/20 text-white px-3 py-1 rounded text-xs font-semibold hover:bg-white/30 transition-all duration-300"
-                  >
-                    SALIN
-                  </button>
-                </div>
-
                 <!-- Mandiri -->
                 <div
                   class="flex items-center justify-between bg-white/10 p-3 rounded-lg backdrop-blur-sm"
@@ -55,9 +32,9 @@
                     </div>
                     <div>
                       <p class="text-white font-semibold text-sm">
-                        1320026999509
+                        1320029317824
                       </p>
-                      <p class="text-gray-300 text-xs">Wiwit</p>
+                      <p class="text-gray-300 text-xs">Wiwit Widyahani</p>
                     </div>
                   </div>
                   <button
@@ -76,10 +53,12 @@
                     <div
                       class="w-12 h-8 bg-blue-600 rounded flex items-center justify-center"
                     >
-                      <span class="text-white font-bold text-xs">BCA</span>
+                      <span class="text-white font-bold text-xs">BJB</span>
                     </div>
                     <div>
-                      <p class="text-white font-semibold text-sm">2780971960</p>
+                      <p class="text-white font-semibold text-sm">
+                        0135904422100
+                      </p>
                       <p class="text-gray-300 text-xs">Ghani Riyantama</p>
                     </div>
                   </div>
