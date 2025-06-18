@@ -9,4 +9,5 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   modules: ["@nuxt/image", "@nuxt/icon", "@nuxt/fonts"],
+  plugins: ["~/plugins/firebase.client.js"],
 });

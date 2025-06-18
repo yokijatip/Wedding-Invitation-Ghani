@@ -56,6 +56,7 @@
       <Countdown />
       <Event />
       <Gallery />
+      <RSVP />
       <Gift />
       <ThankYou />
     </div>
@@ -134,6 +135,7 @@ import Event from "~/components/sections/Event.vue";
 import Gallery from "~/components/sections/Gallery.vue";
 import Gift from "~/components/sections/Gift.vue";
 import ThankYou from "~/components/sections/ThankYou.vue";
+import RSVP from "~/components/sections/RSVP.vue";
 
 // Reactive states
 const isInvitationOpened = ref(false);

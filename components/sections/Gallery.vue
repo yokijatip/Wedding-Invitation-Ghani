@@ -311,7 +311,7 @@ const images = [
   { src: "/img/ourstory1.webp", caption: "Our Story Begins" },
   { src: "/img/gallery1.webp", caption: "Beautiful Moments" },
   { src: "/img/hero4.webp", caption: "Hero Shot 4" },
-  { src: "/img/gallery8.web[", caption: "Special Occasions" },
+  { src: "/img/gallery8.webp", caption: "Special Occasions" },
   { src: "/img/wiwit.webp", caption: "Wiwit's Portrait" },
   { src: "/img/hero1.webp", caption: "Perfect Moments" },
   { src: "/img/gallery3.webp", caption: "Precious Times" },
