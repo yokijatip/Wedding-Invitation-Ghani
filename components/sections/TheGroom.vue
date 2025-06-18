@@ -26,55 +26,15 @@
         <!-- Social Media -->
         <div class="flex items-center space-x-2 justify-center mt-4">
           <Icon name="mdi:instagram" class="w-6 h-6 text-primary-white" />
-          <button
+          <a
+            href="https://www.instagram.com/ghani.riyantama/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-sans text-primary-700 hover:text-primary-500 transition-colors duration-300 font-semibold text-xs"
             @click="handleInstagramClick"
-            class="font-sans text-primary-700 hover:text-primary-500 transition-colors duration-300 font-semibold text-xs cursor-pointer"
           >
             ghani.riyantama
-          </button>
-        </div>
-
-        <!-- Instagram Modal -->
-        <div
-          v-if="showModal"
-          class="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-          @click="closeModal"
-        >
-          <div class="bg-white rounded-lg p-6 max-w-sm mx-4" @click.stop>
-            <div class="text-center">
-              <Icon
-                name="mdi:instagram"
-                class="w-12 h-12 text-pink-500 mx-auto mb-4"
-              />
-              <h3 class="text-lg font-semibold text-gray-800 mb-2">
-                Kunjungi Instagram
-              </h3>
-              <p class="text-gray-600 mb-4">@ghani.riyantama</p>
-
-              <div class="space-y-3">
-                <button
-                  @click="openInstagram"
-                  class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
-                >
-                  Buka Instagram
-                </button>
-
-                <button
-                  @click="copyLink"
-                  class="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-all duration-300"
-                >
-                  {{ copied ? "Link Tersalin!" : "Copy Link" }}
-                </button>
-
-                <button
-                  @click="closeModal"
-                  class="w-full text-gray-500 py-2 px-4 hover:text-gray-700 transition-all duration-300"
-                >
-                  Tutup
-                </button>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -82,60 +42,55 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+// Function to handle Instagram click with multiple fallbacks
+const handleInstagramClick = (event) => {
+  event.preventDefault();
 
-const showModal = ref(false);
-const copied = ref(false);
-
-// Function to handle Instagram click - show modal
-const handleInstagramClick = () => {
-  showModal.value = true;
-};
-
-// Function to close modal
-const closeModal = () => {
-  showModal.value = false;
-  copied.value = false;
-};
-
-// Function to open Instagram
-const openInstagram = () => {
   const username = "ghani.riyantama";
-  const instagramUrl = `https://www.instagram.com/${username}/`;
 
-  try {
-    window.open(instagramUrl, "_blank", "noopener,noreferrer");
-    closeModal();
-  } catch (error) {
-    console.error("Error opening Instagram:", error);
-  }
-};
+  // Method 1: Try Instagram app deep link first (mobile)
+  if (
+    /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    const appUrl = `instagram://user?username=${username}`;
+    const webUrl = `https://www.instagram.com/${username}/`;
 
-// Function to copy link
-const copyLink = async () => {
-  const username = "ghani.riyantama";
-  const instagramUrl = `https://www.instagram.com/${username}/`;
+    // Try to open Instagram app
+    window.location.href = appUrl;
 
-  try {
-    await navigator.clipboard.writeText(instagramUrl);
-    copied.value = true;
-
+    // Fallback to web after 1 second if app doesn't open
     setTimeout(() => {
-      copied.value = false;
-    }, 2000);
-  } catch (error) {
-    // Fallback for older browsers
-    const textArea = document.createElement("textarea");
-    textArea.value = instagramUrl;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
+      window.open(webUrl, "_blank", "noopener,noreferrer");
+    }, 1000);
+  } else {
+    // Method 2: For desktop, try multiple approaches
+    const urls = [
+      `https://www.instagram.com/${username}/`,
+      `https://instagram.com/${username}/`,
+      `https://m.instagram.com/${username}/`,
+    ];
 
-    copied.value = true;
-    setTimeout(() => {
-      copied.value = false;
-    }, 2000);
+    let opened = false;
+
+    urls.forEach((url, index) => {
+      if (!opened) {
+        try {
+          const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+          if (newWindow) {
+            opened = true;
+          }
+        } catch (error) {
+          if (index === urls.length - 1) {
+            // Last attempt failed, show alert
+            alert(
+              `Silakan kunjungi Instagram: @${username}\n\nAtau copy link: https://www.instagram.com/${username}/`
+            );
+          }
+        }
+      }
+    });
   }
 };
 </script>
