@@ -19,7 +19,7 @@
           <!-- Date -->
           <p>
             BULAN <br />
-            08 JUN
+            06 JULI
           </p>
 
           <!-- Year -->

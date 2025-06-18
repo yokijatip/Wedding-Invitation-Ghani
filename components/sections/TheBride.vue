@@ -25,11 +25,11 @@
         <div class="flex items-center space-x-2 justify-center mt-4">
           <Icon name="mdi:instagram" class="w-6 h-6 text-primary-white" />
           <a
-            href="https://instagram.com/wiwitwidyahani"
+            href="https://www.instagram.com/wiwitwhani/"
             target="_blank"
             class="font-sans text-primary-700 hover:text-primary-500 transition-colors duration-300 font-semibold text-xs"
           >
-            wiwit
+            wiwitwhani
           </a>
         </div>
       </div>
