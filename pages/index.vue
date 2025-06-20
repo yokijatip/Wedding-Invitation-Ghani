@@ -20,7 +20,7 @@
             Ghani <span class="font-light">&</span> Wiwit
           </h1>
           <p class="text-sm font-light tracking-wider opacity-90">
-            MINGGU, 8 JUNI 2025
+            MINGGU, 6 JULI 2025
           </p>
         </div>
 
