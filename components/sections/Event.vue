@@ -15,7 +15,7 @@
             minggu, 6 juli 2025
           </h2>
           <h3 class="text-xs font-sans tracking-wider text-primary-white">
-            08.30
+            08.00
           </h3>
           <h2 class="font-serif uppercase text-white">Gedung</h2>
           <p
@@ -41,7 +41,7 @@
             minggu, 6 juli 2025
           </h2>
           <h3 class="text-xs font-sans tracking-wider text-primary-white">
-            11.00 - 14.00 WIB
+            11.00 - 15.00 WIB
           </h3>
           <h2 class="font-serif uppercase text-white">Gedung</h2>
           <p
