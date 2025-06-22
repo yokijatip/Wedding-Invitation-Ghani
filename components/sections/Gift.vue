@@ -89,9 +89,9 @@
                 Anda dapat mengirim kado melalui
               </p>
               <p class="text-xs font-sans text-primary-white font-semibold">
-                Kp. Baru Darussalam Rt 01/22 Desa Ciptaharja Kec. Cipatat Kab.
-                Bandung Barat <br />
-                Penerima : Wiwit Widyahani
+                Perumahan Cipatat elok blok Q no. 2b Rt 002 Rw 021 Desa
+                Ciptaharja, Kecamatan Cipatat, Kabupaten Bandung Barat <br />
+                Penerima : Ghani Riyantama  
               </p>
 
               <!-- Button Google Maps -->
@@ -165,7 +165,7 @@ const openWhatsApp = () => {
 // Function to open Google Maps
 const openGoogleMaps = () => {
   const address = encodeURIComponent(
-    "Gedung SLB Negeri bandung barat Kp. Baru Rt 02 Rw 18 Desa Ciptaharja"
+    "Perumahan Cipatat elok blok Q no. 2b Rt 002 Rw 021 Desa Ciptaharja, Kecamatan Cipatat, Kabupaten Bandung Barat, Jawa Barat, Indonesia"
   );
   const mapsUrl = `https://maps.google.com/maps?q=${address}`;
   window.open(mapsUrl, "_blank");
