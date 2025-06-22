@@ -89,8 +89,9 @@
                 Anda dapat mengirim kado melalui
               </p>
               <p class="text-xs font-sans text-primary-white font-semibold">
-                Gedung SLB Negeri bandung barat Kp. Baru Rt 02 Rw 18 Desa
-                Ciptaharja
+                Kp. Baru Darussalam Rt 01/22 Desa Ciptaharja Kec. Cipatat Kab.
+                Bandung Barat <br />
+                Penerima : Wiwit Widyahani
               </p>
 
               <!-- Button Google Maps -->
