@@ -38,14 +38,14 @@
                     </div>
                   </div>
                   <button
-                    @click="copyToClipboard('1320026999509', 'Mandiri')"
+                    @click="copyToClipboard('1320029317824', 'Mandiri')"
                     class="bg-white/20 text-white px-3 py-1 rounded text-xs font-semibold hover:bg-white/30 transition-all duration-300"
                   >
                     SALIN
                   </button>
                 </div>
 
-                <!-- BCA -->
+                <!-- BJB -->
                 <div
                   class="flex items-center justify-between bg-white/10 p-3 rounded-lg backdrop-blur-sm"
                 >
@@ -63,7 +63,7 @@
                     </div>
                   </div>
                   <button
-                    @click="copyToClipboard('2780971960', 'BCA')"
+                    @click="copyToClipboard('0135904422100', 'BJB')"
                     class="bg-white/20 text-white px-3 py-1 rounded text-xs font-semibold hover:bg-white/30 transition-all duration-300"
                   >
                     SALIN
@@ -91,7 +91,7 @@
               <p class="text-xs font-sans text-primary-white font-semibold">
                 Perumahan Cipatat elok blok Q no. 2b Rt 002 Rw 021 Desa
                 Ciptaharja, Kecamatan Cipatat, Kabupaten Bandung Barat <br />
-                Penerima : Ghani Riyantama  
+                Penerima : Ghani Riyantama
               </p>
 
               <!-- Button Google Maps -->
